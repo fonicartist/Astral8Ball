@@ -1,0 +1,157 @@
+/* Gradient background */
+html, body {
+  background: linear-gradient(black, #00172E 45% ,#00366D 80%, #AB40FD 105%);
+  background-size: cover;
+  height: 100%;
+}
+
+.prompt {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block; 
+  font-size: 36px; 
+  color: #fff; 
+  text-shadow: 2px 2px 4px #1D1D1D; 
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button#magic-8-ball-button {
+  position: relative;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  background: linear-gradient(#00DFFF,#8500FF);
+  box-shadow: 4px 4px 0 #1D1D1D;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button#magic-8-ball-button:hover {
+  background: linear-gradient(#10EFFF,#9500FF);
+  transform: translate(-50%, -50%) translate(0, -1px);
+}
+
+button#magic-8-ball-button:active {
+  background: linear-gradient(#00DFFF,#8500FF);
+  transform: translate(-50%, -50%) translate(0, 1px);
+}
+
+#mini-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#4400FF, #8E00A5);
+  transition: opacity 2.5s;
+  opacity: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: none;
+  /* Add the following properties */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 0.7s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #646464;
+  cursor: pointer;
+}
+
+#close-button:hover {
+  color: #C7C7C7;
+}
+
+#message {
+  padding: 50px 50px;
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  text-align: center;
+  align-self: center !important;
+}
+
+/* Star element */
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+  animation: twinkle 2s infinite;
+}
+
+/* Keyframes for twinkling animation */
+@keyframes twinkle {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Shooting Star element */
+.shooting-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(to top right, white, rgba(255, 255, 255, 70));
+  box-shadow: 0 0 20px 5px #66CCFF;
+  border-radius: 50%;
+  animation: fade 1s;
+}
+
+/* Keyframes for appearing animation */
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
